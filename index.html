@@ -21,7 +21,7 @@
         <div class="date">25.10.2026</div>
         <p class="place" data-lb="📍 Zu Biekerech beim Pompjeesbau" data-fr="📍 À Beckerich, au centre d'incendie et de secours">📍 Zu Biekerech beim Pompjeesbau</p>
         <p class="time">10:00 – 18:00 <span data-lb="Auer" data-fr="heures">Auer</span></p>
-        <a class="button button-light" href="#umellen" data-lb="🧯 Feierläscher-Préifung: Umellen" data-fr="🧯 Contrôle des extincteurs : s'inscrire">🧯 Feierläscher-Préifung: Umellen</a>
+        <a class="button button-light" href="https://docs.google.com/forms/d/e/1FAIpQLSfr3IYgC4SzIu5nwGQrMaSTs66hRMEJgscyMkamlW7b3T2Q7A/viewform?usp=publish-editor" target="_blank" rel="noopener" data-lb="🧯 Feierläscher-Préifung: Umellen" data-fr="🧯 Contrôle des extincteurs : s'inscrire">🧯 Feierläscher-Préifung: Umellen</a>
       </div>
     </div>
   </header>
@@ -43,7 +43,7 @@
           <div class="icon">🧯</div>
           <h3 data-lb="Feierläscher" data-fr="Extincteurs">Feierläscher</h3>
           <p data-lb="Préifung a Verkaf vu Feierläscher." data-fr="Contrôle et vente d'extincteurs.">Préifung a Verkaf vu Feierläscher.</p>
-          <a href="#umellen" class="text-link" data-lb="Elo umellen →" data-fr="S'inscrire maintenant →">Elo umellen →</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfr3IYgC4SzIu5nwGQrMaSTs66hRMEJgscyMkamlW7b3T2Q7A/viewform?usp=publish-editor" target="_blank" rel="noopener" class="text-link" data-lb="Elo umellen →" data-fr="S'inscrire maintenant →">Elo umellen →</a>
         </article>
         <article class="card">
           <div class="icon">🚒</div>
@@ -88,42 +88,17 @@
             <div class="info-line" data-lb="🕙 10:00 – 18:00 Auer" data-fr="🕙 10:00 – 18:00 heures">🕙 10:00 – 18:00 Auer</div>
           </div>
 
-          <form id="registrationForm">
-            <label>
-              <span data-lb="Virnumm *" data-fr="Prénom *">Virnumm *</span>
-              <input name="firstName" required autocomplete="given-name">
-            </label>
-            <label>
-              <span data-lb="Familljennumm *" data-fr="Nom *">Familljennumm *</span>
-              <input name="lastName" required autocomplete="family-name">
-            </label>
-            <label>
-              <span data-lb="E-Mail" data-fr="E-mail">E-Mail</span>
-              <input name="email" type="email" autocomplete="email">
-            </label>
-            <label>
-              <span data-lb="Telefonsnummer" data-fr="Numéro de téléphone">Telefonsnummer</span>
-              <input name="phone" type="tel" autocomplete="tel">
-            </label>
-            <label>
-              <span data-lb="Wéi vill Feierläscher bréngt Dir mat? *" data-fr="Combien d'extincteurs apportez-vous ? *">Wéi vill Feierläscher bréngt Dir mat? *</span>
-              <input name="extinguishers" type="number" min="1" max="50" value="1" required>
-            </label>
-            <label>
-              <span data-lb="Bemierkung" data-fr="Remarque">Bemierkung</span>
-              <textarea name="message" rows="3" data-lb-placeholder="Optional" data-fr-placeholder="Facultatif" placeholder="Optional"></textarea>
-            </label>
-            <label class="consent">
-              <input name="consent" type="checkbox" required>
-              <span data-lb="Ech wëll mech fir d'Préifung umellen. *" data-fr="Je souhaite m'inscrire au contrôle. *">Ech wëll mech fir d'Préifung umellen. *</span>
-            </label>
-            <button class="button button-primary" type="submit" data-lb="Umeldung ofschécken" data-fr="Envoyer l'inscription">Umeldung ofschécken</button>
-            <p id="formMessage" class="form-message" role="status"></p>
-            <p class="privacy-note" data-lb="Är Donnéeë gi just benotzt fir d'Organisatioun vun der Feierläscher-Préifung."
-               data-fr="Vos données sont utilisées uniquement pour l'organisation du contrôle des extincteurs.">
-              Är Donnéeë gi just benotzt fir d'Organisatioun vun der Feierläscher-Préifung.
-            </p>
-          </form>
+          <div class="google-form-wrap">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfr3IYgC4SzIu5nwGQrMaSTs66hRMEJgscyMkamlW7b3T2Q7A/viewform?usp=publish-editor"
+                title="Sécherheetsdag 2026 – Feierläscher-Préifung"
+                loading="lazy"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">
+                Wird geladen…
+              </iframe>
+            </div>
         </div>
       </div>
     </section>
