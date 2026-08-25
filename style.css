@@ -37,8 +37,8 @@ input,textarea{width:100%;border:1px solid #ccd3df;border-radius:10px;padding:12
 input:focus,textarea:focus{outline:3px solid rgba(8,184,236,.22);border-color:var(--blue)}
 .consent{display:flex;align-items:start;font-weight:600;font-size:.9rem}.consent input{width:18px;margin-top:3px;margin-right:8px}
 .form-message{min-height:25px;font-weight:800;margin:0}.privacy-note{font-size:.78rem;color:#667085;margin:0}
-.flyer-section{padding:65px 0;text-align:center}.flyer{width:min(760px,100%);border-radius:18px;box-shadow:0 10px 35px rgba(0,0,0,.15);margin-top:20px}
+.flyer-section{padding:65px 0;text-align:center}.flyer-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:20px}.flyer-grid h3{color:var(--dark);margin:0 0 12px}.flyer{width:100%;border-radius:18px;box-shadow:0 10px 35px rgba(0,0,0,.15)}
 .contact{text-align:center;padding:55px 0;background:#ffe4e4}.contact p{margin:5px}
 footer{padding:20px;text-align:center;background:#050f40;color:#fff;font-size:.85rem}
 @media(max-width:800px){.hero{min-height:600px}.grid{grid-template-columns:1fr 1fr}.registration-box{grid-template-columns:1fr;gap:25px}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{min-height:560px}h1{letter-spacing:-2px}.button{width:100%}.registration{padding:35px 0}.flyer-section{padding:40px 0}.language-switcher{top:12px;right:12px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.flyer-grid{grid-template-columns:1fr;gap:35px}.hero{min-height:560px}h1{letter-spacing:-2px}.button{width:100%}.registration{padding:35px 0}.flyer-section{padding:40px 0}.language-switcher{top:12px;right:12px}}

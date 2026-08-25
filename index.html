@@ -130,8 +130,17 @@
 
     <section class="flyer-section">
       <div class="container">
-        <h2 data-lb="De Flyer" data-fr="Le flyer">De Flyer</h2>
-        <img src="flyer.png" alt="Flyer vum Sécherheetsdag 2026" class="flyer">
+        <h2 data-lb="D'Flyeren" data-fr="Les flyers">D'Flyeren</h2>
+        <div class="flyer-grid">
+          <div>
+            <h3>🇱🇺 Lëtzebuergesch</h3>
+            <img src="flyer.png" alt="Lëtzebuergesche Flyer vum Sécherheetsdag 2026" class="flyer">
+          </div>
+          <div>
+            <h3>🇫🇷 Français</h3>
+            <img src="flyer-fr.png" alt="Flyer français de la Journée de sécurité 2026" class="flyer">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -149,6 +158,91 @@
   </footer>
 
   <script src="config.js"></script>
-  <script src="app.js"></script>
+  <script>
+(function () {
+  let currentLang = localStorage.getItem("secherheetsdag-lang") || "lb";
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-lb][data-fr]").forEach(function (el) {
+      el.textContent = el.getAttribute("data-" + lang);
+    });
+
+    document.querySelectorAll("[data-lb-placeholder][data-fr-placeholder]").forEach(function (el) {
+      el.placeholder = lang === "lb"
+        ? el.getAttribute("data-lb-placeholder")
+        : el.getAttribute("data-fr-placeholder");
+    });
+
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+    });
+
+    document.title = lang === "lb"
+      ? "Sécherheetsdag 2026 – Biekerech"
+      : "Journée de la sécurité 2026 – Beckerich";
+
+    localStorage.setItem("secherheetsdag-lang", lang);
+  }
+
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      applyLanguage(btn.getAttribute("data-lang"));
+    });
+  });
+
+  applyLanguage(currentLang);
+
+  const form = document.getElementById("registrationForm");
+  const message = document.getElementById("formMessage");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (!window.REGISTRATION_ENDPOINT) {
+      message.textContent = currentLang === "lb"
+        ? "D'Umeldungsform ass prett. Fir d'Umeldungen ze späicheren, muss nach de gratis Google-Sheet-Link agefouert ginn."
+        : "Le formulaire est prêt. Pour enregistrer les inscriptions, le lien gratuit vers Google Sheets doit encore être configuré.";
+      message.style.color = "#b54708";
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.timestamp = new Date().toISOString();
+    data.language = currentLang;
+
+    const button = form.querySelector("button");
+    button.disabled = true;
+    button.textContent = currentLang === "lb" ? "Gëtt geschéckt…" : "Envoi…";
+    message.textContent = "";
+
+    try {
+      await fetch(window.REGISTRATION_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)
+      });
+
+      form.reset();
+      form.querySelector('[name="extinguishers"]').value = 1;
+      message.textContent = currentLang === "lb"
+        ? "Merci! Är Umeldung ass ukomm."
+        : "Merci ! Votre inscription a bien été enregistrée.";
+      message.style.color = "#087443";
+    } catch (error) {
+      message.textContent = currentLang === "lb"
+        ? "Et ass e Feeler opgetrueden. Probéiert w.e.g. nach eng Kéier."
+        : "Une erreur s'est produite. Veuillez réessayer.";
+      message.style.color = "#b42318";
+    } finally {
+      button.disabled = false;
+      button.textContent = currentLang === "lb" ? "Umeldung ofschécken" : "Envoyer l'inscription";
+    }
+  });
+})();
+</script>
 </body>
 </html>
