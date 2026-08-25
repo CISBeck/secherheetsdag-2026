@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="lb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff3b3b">
+  <title>Sécherheetsdag 2026 – Biekerech</title>
+  <meta name="description" content="Sécherheetsdag 2026 zu Biekerech beim Pompjeesbau – 25.10.2026 vun 10:00 bis 18:00 Auer.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <span class="badge">🚒 Amicale Pompjeeën Gemeng Biekerech asbl</span>
+        <h1>SÉCHERHEETSDAG</h1>
+        <div class="date">25.10.2026</div>
+        <p class="place">📍 Zu Biekerech beim Pompjeesbau</p>
+        <p class="time">10:00 – 18:00 Auer</p>
+        <a class="button button-light" href="#umellen">🧯 Feierläscher-Préifung: Umellen</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="container">
+        <h2>Kommt laanscht!</h2>
+        <p>
+          E Sécherheetsdag fir Kleng a Grouss, mat Pompjeesgefierer, Animatiounen,
+          Demonstratiounen, Iessen a Gedrénks – an natierlech der <strong>Préifung a Verkaf vu Feierläscher</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="container grid">
+        <article class="card fire">
+          <div class="icon">🧯</div>
+          <h3>Feierläscher</h3>
+          <p>Préifung a Verkaf vu Feierläscher.</p>
+          <a href="#umellen" class="text-link">Elo umellen →</a>
+        </article>
+        <article class="card">
+          <div class="icon">🚒</div>
+          <h3>Pompjeesgefierer</h3>
+          <p>Austelle vu Pompjeesgefierer.</p>
+        </article>
+        <article class="card">
+          <div class="icon">👨‍🚒</div>
+          <h3>Animatioun</h3>
+          <p>Animatioun fir Kleng a Grouss.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔥</div>
+          <h3>Virféierungen</h3>
+          <p>Ëmweltverschmotzung an „Brand a Jugend“.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⛑️</div>
+          <h3>1. Hëllef</h3>
+          <p>Verkaf vun 1t Hëllef-Material.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🍽️</div>
+          <h3>Iessen & Gedrénks</h3>
+          <p>Fir Iessen a Gedrénks ass natierlech beschtens gesuergt.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="umellen" class="registration">
+      <div class="container">
+        <div class="registration-box">
+          <div class="registration-copy">
+            <span class="small-title">🧯 FEIERLÄSCHER-PRÉIFUNG</span>
+            <h2>Wëllt Dir Äre Feierläscher préife loossen?</h2>
+            <p>
+              Mellt Iech am Viraus un, fir datt mir besser kënne plangen,
+              wéi vill Leit a Feierläscher op den Dag kommen.
+            </p>
+            <div class="info-line">📅 25.10.2026</div>
+            <div class="info-line">📍 Biekerech – Pompjeesbau</div>
+            <div class="info-line">🕙 10:00 – 18:00 Auer</div>
+          </div>
+
+          <form id="registrationForm">
+            <label>
+              Virnumm *
+              <input name="firstName" required autocomplete="given-name">
+            </label>
+            <label>
+              Familljennumm *
+              <input name="lastName" required autocomplete="family-name">
+            </label>
+            <label>
+              E-Mail
+              <input name="email" type="email" autocomplete="email">
+            </label>
+            <label>
+              Telefonsnummer
+              <input name="phone" type="tel" autocomplete="tel">
+            </label>
+            <label>
+              Wéi vill Feierläscher bréngt Dir mat? *
+              <input name="extinguishers" type="number" min="1" max="50" value="1" required>
+            </label>
+            <label>
+              Bemierkung
+              <textarea name="message" rows="3" placeholder="Optional"></textarea>
+            </label>
+            <label class="consent">
+              <input name="consent" type="checkbox" required>
+              <span>Ech wëll mech fir d'Préifung umellen. *</span>
+            </label>
+            <button class="button button-primary" type="submit">Umeldung ofschécken</button>
+            <p id="formMessage" class="form-message" role="status"></p>
+            <p class="privacy-note">
+              Är Donnéeë gi just benotzt fir d'Organisatioun vun der Feierläscher-Préifung.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="flyer-section">
+      <div class="container">
+        <h2>De Flyer</h2>
+        <img src="flyer.png" alt="Flyer vum Sécherheetsdag 2026" class="flyer">
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <h2>Mir gesinn eis zu Biekerech! 👋</h2>
+        <p>Amicale Pompjeeën Gemeng Biekerech asbl · F12666</p>
+        <p>CIS Beckerich 2, Jos Seyler Strooss, L-8522 Beckerich</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Amicale Pompjeeën Gemeng Biekerech asbl</div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
